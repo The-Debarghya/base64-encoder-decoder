@@ -1,2 +1,3 @@
 # base64-encoder-decoder
-A simple go-program to encode a string or decode with base64
+Encodes a string to base64
+And decodes a base64 encoded string to readable string.
