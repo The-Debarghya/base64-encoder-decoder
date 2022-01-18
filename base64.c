@@ -77,6 +77,7 @@ int main(int argc, char** argv) {
     printf("./base64 [OPTION] [string]\nUsage:\n\t-e --encode [string]--->encode a string\n\t-d --decode [string]--->decode a string \n\n");
     exit(0);
   }
+  char *p;
   char mysrc[1024];
   char myb64[1024] = "";
   char mydst[1024] = "";
@@ -89,6 +90,7 @@ int main(int argc, char** argv) {
   } else {
     strncpy(mydst, argv[2], 1023);
     b64_decode(mydst, myb64);
+    if ((p=strchr(name, '\n')) != NULL) *p = '\0';
     printf("Your string:'%s' decodes from base64 as:'%s'\n", mydst, myb64);
 
   }
